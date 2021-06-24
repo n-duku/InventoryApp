@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo_name">Admin👨‍💻</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html" class="active">
+                    <i class="fas fa-columns"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="additem.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span class="links_name">Add Item</span>
+                </a>
+            </li>
+            <li>
+                <a href="updatequantity.html">
+                    <i class="far fa-edit"></i>
+                    <span class="links_name">Update Quantity</span>
+                </a>
+            </li>
+            <li>
+                <a href="updateitem.html">
+                    <i class="fas fa-eraser"></i>
+                    <span class="links_name">Update Item Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="removeitem.html">
+                    <i class="fas fa-minus-circle"></i>
+                    <span class="links_name">Remove Item</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class="fas fa-plus-circle"></i>
+                <span class="dashboard">Add Item</span>
+            </div>
+            <div class="profile-details">
+                <img src="assets/img/usegit.png" alt="duku">
+                <span class="admin_name">Nana Duku</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+
+        <div class="home-content">
+            <div class="overview-boxes">
+                <div class="box">
+                    <div class="right-side">
+                        <div class="box-topic">Total Items</div>
+                        <div class="number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form" onsubmit="return false">
+            <form action="">
+              <label for="item">Item</label>
+              <input type="text" id="input1" name="item" placeholder="Item" required>
+          
+              <label for="desc">Description</label>
+              <input type="text" id="input2" name="Description" placeholder="Description" required>
+          
+              <label for="country">Category</label>
+              <select id="input3" name="category">
+                <option value="electronics">Electronics</option>
+                <option value="groceries">Groceries</option>
+                <option value="other">Other</option>
+              </select>
+               
+                <label for="desc">Quantity</label>
+              <input type="number" id="input4" name="quantity" placeholder="Quantity" required>
+               
+              <input type="submit" id="submit" value="Add">
+            </form>
+          </div>
+          
+    </section>
+    <script src="script/additem.js"></script>
+</body>
+
+</html>

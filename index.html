@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inventory</title>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Admin👨‍💻</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active">
+            <i class="fas fa-columns"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="additem.html">
+            <i class="fas fa-plus-circle"></i>
+            <span class="links_name">Add Item</span>
+          </a>
+        </li>
+        <li>
+          <a href="updatequantity.html">
+            <i class="far fa-edit"></i>
+            <span class="links_name">Update Quantity</span>
+          </a>
+        </li>
+        <li>
+          <a href="updateitem.html">
+            <i class="fas fa-eraser"></i>
+            <span class="links_name">Update Item Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="removeitem.html">
+            <i class="fas fa-minus-circle"></i>
+            <span class="links_name">Remove Item</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="fas fa-columns"></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="profile-details">
+        <img src="assets/img/usegit.png" alt="duku">
+        <span class="admin_name">Nana Duku</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Items</div>
+            <div class="number"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Items in stock</div>
+            <div class="stockNumber">1</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Category</div>
+            <div class="catNumber">1</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-boxes" id="descStock">
+        
+      </div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" colspan="1">Item</th>
+          <th scope="col">Description</th>
+          <th scope="col">Category</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody id="dispData">
+      
+      </tbody>
+    </table>
+    
+  </section>
+ <script src="script/index.js"></script>
+</body>
+</html>
