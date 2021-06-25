@@ -20,11 +20,11 @@ document.body.onload = ()=>{
     inventoryData.forEach(descData =>{
         let dispDesc;
         if(descData['quantity'] == 0){
-            dispDesc = `<div class="box" style="background-color: red; "><div class="right-side"><div class="number">${descData['name']} is out of stock</div></div></div>`;
+            dispDesc = `<div class="box" style="background-color: red; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : Out of stock</div></div></div>`;
         }else if(( descData['quantity'] > 0 ) && (descData['quantity'] < 21 )){
-            dispDesc = `<div class="box" style="background-color: orange;"><div class="right-side"><div class="number">${descData['name']} is almost out of stock</div></div></div>`;
+            dispDesc = `<div class="box" style="background-color: orange; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : Almost out</div></div></div>`;
         }else{
-            dispDesc = `<div class="box" style="background-color: green;"><div class="right-side"><div class="number">${descData['name']} is in stock</div></div></div>`; 
+            dispDesc = `<div class="box" style="background-color: green; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : In stock</div></div></div>`; 
         }
         colorData += dispDesc;
     })
