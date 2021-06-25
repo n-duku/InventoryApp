@@ -141,23 +141,45 @@ nav .profile-details i{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+    gap: 8px;
   padding: 0 20px;
   margin-bottom: 26px;
 }
+
+/* .home-content #descStock{
+    flex-wrap: nowrap;
+    gap: 8px;
+} */
+
+#descStock .box .number{
+  font-size: 14px;
+}
+
 .overview-boxes .box{
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  width: calc(100% / 4 - 15px);
+  width: calc(100% / 3);
   background: #fff;
-  padding: 5px 5px;
+  padding: 10px 5px;
   border-radius: 12px;
+  margin-bottom: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+
+.overview-boxes .box.description{
+  height: 64px;
+}
+
+.right-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .overview-boxes .box-topic{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+  width: 100%;
+  text-align: center;
 }
 .home-content .box .number{
   display: inline-block;
@@ -311,11 +333,11 @@ td:first-child {
 .text-offset {
   color: #7c7c80;
 }
-.item-stock,
-.item-qty {
+.item-desc,
+.item-cat {
   text-align: center;
 }
-.item-price {
+.item-qty {
   text-align: center;
 }
 .item-multiple {
