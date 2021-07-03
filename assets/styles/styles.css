@@ -156,6 +156,27 @@ nav .profile-details i{
   font-size: 14px;
 }
 
+#outStock{
+  background-color: red;
+  padding: 3px 3px;
+  color: ghostwhite;
+  border-radius: 4px;
+}
+
+#almostOut{
+  background-color: orange;
+  padding: 3px 3px;
+  color: ghostwhite;
+  border-radius: 4px;
+}
+
+#inStock{
+  background-color: green;
+  padding: 3px 3px;
+  color: ghostwhite;
+  border-radius: 4px;
+}
+
 .overview-boxes .box{
   width: calc(100% / 3);
   background: #fff;
@@ -308,11 +329,12 @@ input[type=submit] {
 }
 
 table {
+  margin: 0 auto;
   border-collapse: separate;
   border-spacing: 0;
   color: #4a4a4d;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 100%;
+  width: 99%;
 }
 th,
 td {
@@ -320,10 +342,16 @@ td {
   vertical-align: middle;
 }
 thead {
+  width: 100%;
   background: linear-gradient(#13151a, #293f50);
   color: #fff;
   text-transform: uppercase;
 }
+
+tbody{
+  width: 100%;
+}
+
 th:first-child {
   border-top-left-radius: 5px;
   text-align: left;
@@ -339,7 +367,8 @@ td {
   border-right: 1px solid #cecfd5;
 }
 td:first-child {
-  border-left: 1px solid #cecfd5;
+  border-left-width: 4px;
+  border-left-style: solid;
 }
 .book-title {
   color: #395870;

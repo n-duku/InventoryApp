@@ -11,25 +11,12 @@ document.body.onload = ()=>{
     totalItems.innerHTML = inventoryData.length;
 
     inventoryData.forEach(data => {
-        const dispItem = `<tr><td><span class="text-offset">${data['name']}</span></td><td class="item-desc">${data['description']}</td><td class="item-cat">${data['category']}</td><td class="item-qty">${data['quantity']}</td></tr>`
+        const dispItem = `<tr ><td style = 'border-left-color: ${data['quantity'] == 0 ? 'red' : data['quantity'] > 0 && data['quantity'] < 21 ? 'orange' : 'green'}'><span class="text-offset">${data['name']}</span></td><td class="item-desc">${data['description']}</td><td class="item-cat">${data['category']}</td><td class="item-qty">${data['quantity']}</td></tr>`
         allData += dispItem;
     });
 
     dispData.innerHTML = allData;
 
-    inventoryData.forEach(descData =>{
-        let dispDesc;
-        if(descData['quantity'] == 0){
-            dispDesc = `<div class="box" style="background-color: red; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : Out of stock</div></div></div>`;
-        }else if(( descData['quantity'] > 0 ) && (descData['quantity'] < 21 )){
-            dispDesc = `<div class="box" style="background-color: orange; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : Almost out</div></div></div>`;
-        }else{
-            dispDesc = `<div class="box" style="background-color: green; color: ghostWhite;"><div class="right-side"><div class="number">${descData['name']} : In stock</div></div></div>`; 
-        }
-        colorData += dispDesc;
-    })
-    colorContainer.innerHTML = colorData;
-  
     let totalCate = [];
     inventoryData.forEach(item => {
         if(!totalCate.includes(item['category'])){

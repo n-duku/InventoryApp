@@ -8,7 +8,7 @@ document.body.onload =()=>{
 
     inventoryData.forEach(data => {
         const dispItem = `<tr>
-        <td>
+        <td style = 'border-left-color: ${data['quantity'] == 0 ? 'red' : data['quantity'] > 0 && data['quantity'] < 21 ? 'orange' : 'green'}'>
           <span class="text-offset">${data['name']}</span>
         </td>
         <td class="item-stock"><input type="text" name="" value="${data['description']}"></td>
